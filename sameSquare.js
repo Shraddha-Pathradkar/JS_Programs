@@ -1,3 +1,7 @@
+//FREQUENCY COUNTING
+
+//LESS EFFECIENT SOLUTION
+
 squareSums = (arr1, arr2) => {
   if (arr1.length !== arr2.length) {
     return false;
@@ -11,6 +15,8 @@ squareSums = (arr1, arr2) => {
   }
   return true;
 };
+
+//MORE EFFECIENT SOLUTION -- O(N)
 
 squareSums = (arr1, arr2) => {
   let obj1 = {};
