@@ -1,6 +1,5 @@
 //How do you find the middle element of a singly linked list in one pass?
 
-// time complexity - O(1)
 class Node {
   constructor(val) {
     this.val = val;
@@ -28,8 +27,21 @@ class SinglyLinkedList {
   traverse() {
     let current = this.head;
     while (current) {
+      console.log(current.val);
       current = current.next;
     }
+  }
+  reverse() {
+    let current = this.head;
+    let prev;
+    let next;
+    while (current !== null) {
+      next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
+    }
+    return prev;
   }
 }
 var list = new SinglyLinkedList();
